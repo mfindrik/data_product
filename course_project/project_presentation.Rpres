@@ -24,7 +24,7 @@ Application link:
 https://mfindrik.shinyapps.io/course_project/
 
 Application code link:
-
+https://github.com/mfindrik/data_product/tree/master/course_project
 
 Dataset Summary
 ========================================================
