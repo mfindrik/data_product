@@ -1,0 +1,58 @@
+Coursera Project: Shiney Application and Reproducable Pitch
+========================================================
+author: A Coursera Student
+date:  19 July 2020
+autosize: true
+
+Project Task
+========================================================
+
+This is a presentation deliverable for the course Developing Data Products as part of the Coursera Data Science Specialization.
+
+The presentation sadisfies the following requirements:
+- It is done in Rstudio Presenter
+- It is 5 pages long
+- It is published in Rpubs
+- It contains embedded R code
+
+Project Solution
+========================================================
+
+Using data provided by "cars" dataset, a linear model was fitted that predicts cars' stopping distance based on its speed.
+
+Application link:
+https://mfindrik.shinyapps.io/course_project/
+
+Application code link:
+
+
+Dataset Summary
+========================================================
+
+A sample and summary of the dataset used in the application:
+
+```{r, echo=FALSE}
+head(cars)
+
+summary(cars)
+```
+
+
+Linear Model
+========================================================
+
+The application calculates the stopping distance based on linear model obtained by fitting speed and distance variables:
+
+```{r, echo=TRUE}
+data(cars)
+mdl <- lm(cars$dist ~ cars$speed)
+
+```
+
+```{r, echo=FALSE}
+plot(cars$speed, cars$dist, xlab = "Car Speed (MPH)", 
+     ylab = "Stopping Distance (Feet)",
+     main = "Stopping Distance of Cars Based on Speed")
+abline(mdl$coefficients[1], mdl$coefficients[2], col = "blue")
+
+```
